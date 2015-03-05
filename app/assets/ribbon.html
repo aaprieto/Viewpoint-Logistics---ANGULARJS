@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style>
+   
+   .button {   
+  
+	 	font-family: Verdana, Verdana, Verdana;
+		background-color: #D2D4E0;
+	 	font-size: 18px;
+  		font-weight: bolder;
+		height: 109px;
+		width: 160px;
+		
+		
+  }
+       
+
+  
+  .button {
+
+		 -moz-border-radius:6px;
+   -webkit-border-radius:6px;
+   border-radius:6px; 
+
+	}
+
+.button {
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#D2D4E0), to(#D2D4E0));
+
+	background: -moz-linear-gradient(top, #D2D4E0, #D2D4E0);
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2D4E0', endColorstr='#D2D4E0')
+
+	}
+
+ 
+   
+   
+</style>
+<script type="text/javascript">
+
+
+function clickRibbon(ribbonid){
+		window.close();  
+	
+		   
+	 	window.opener.applyRibbon(ribbonid); 
+	}
+
+
+function cancelWindow(){
+	window.close();  
+
+} 
+
+
+
+</script>  
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Main Menu</title>
+
+
+</head>
+
+<body>
+
+  <div align="center">
+  <!--
+    <h3 class="name">Mercury</h3>
+    <p class="symbol">Hg</p>
+    <p class="number">80</p>
+    <p class="weight">200.59</p>
+    -->
+        <input class="button" id="btn_applymyview" name="applymyview" type="button" value="Apply MyView" onclick='clickRibbon("applymyview")' />        
+        <input  class="button" id="btn_panels" name="panels" type="button" value="Panels" onclick='clickRibbon("panels")' />  
+        <!-- input id="btn_clear" name="clear" type="button" value="Clear" onclick='clickRibbon("clear")' style="height:60px;" / -->  
+        <input  class="button" id="btn_selectall" name="selectall" type="button" value="Select All" onclick='clickRibbon("selectall")' />  
+        <input  class="button" id="btn_unsort" name="unsort" type="button" value="Unsort" onclick='clickRibbon("unsort")'/>  
+        <input  class="button" id="btn_takeaction" name="takeaction" type="button" value="Take Action" onclick='clickRibbon("takeaction")'/>  
+        <input  class="button" id="btn_administration" name="administration" type="button" value="Administration" onclick='clickRibbon("administration")'/>  
+        <input  class="button" id="btn_fokeysupport" name="fokeysupport" type="button" value="FO Support" onclick='clickRibbon("fokeysupport")'/>  
+
+ 
+    
+ 
+  </div>
+  <div style="height:10px">
+  
+  </div>
+  <div align="center">
+        <input  class="button" id="btn_filter" name="filter" type="button" value="Filter" onclick='clickRibbon("filter")'/>        
+        <input  class="button" id="btn_sort" name="sort" type="button" value="Sort" onclick='clickRibbon("sort")'  />  
+        <input  class="button" id="btn_undo" name="undo" type="button" value="Undo" onclick='clickRibbon("undo")'  />  
+        <input  class="button" id="btn_specials" name="specials" type="button" value="Specials" onclick='clickRibbon("specials")'  />  
+        <input  class="button" id="btn_spreadsheet" name="spreadsheet" type="button" value="Spreadsheet" onclick='clickRibbon("spreadsheet")'/>  
+        <input  class="button" id="btn_xml" name="xml" type="button" value="XML" onclick='clickRibbon("xml")' />  
+        <input  class="button" id="btn_query" name="query" type="button" value="Query" onclick='clickRibbon("query")'  />  
+        <input  class="button" id="btn_cancel" name="cancel" type="button" value="Cancel" onclick='cancelWindow()' />  
+     
+
+  </div>
+
+</body>
+</html>

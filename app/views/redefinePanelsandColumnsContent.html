@@ -1,0 +1,24 @@
+<fieldset>
+    <legend>Redefine Panels and Columns</legend>
+    <div class="modal-body" class="myGrid" >
+                        <div id="grid1" ui-grid="gridOptions_rendition"   ui-grid-cellNav ui-grid-pinning  class="grid"   external-scopes="myViewModel" ></div>
+                        <div id="grid2" ui-grid="gridOptions_userrendition"  ui-grid-cellNav  class="grid" ></div>
+                        <div id=xyz align="left">
+                            <!-- button class="btn-primary  btn-xl" type="button" ng-click="addPanel()">Add Panel</button -->
+                            <button class="btn-primary  btn-xl" type="button"  ng-click="clearAll()">Clear All</button>
+                        </div>     
+        <div class="modal" ng-style="modalStyle">{{modalStyle}} 
+            <div class="modal-dialog">
+                <div class="modal-content"> 
+                    <div class="modal-header"></div>
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn-primary btn-xl" ng-click="okrendition()">OK</button>
+        <button class="btn-warning btn-xl" ng-click="cancel()">Cancel</button>
+    </div>
+</fieldset>
+                

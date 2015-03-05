@@ -1,0 +1,5 @@
+[{"field": "invoice" , "displayName": "Invoice"},
+  {"field": "client" , "displayName": "Client"},
+  {"field": "branch" , "displayName": "Branch"},
+  {"field": "to_name" , "displayName": "Name"},
+  {"field": "revenue" , "displayName": "Revenue"}]

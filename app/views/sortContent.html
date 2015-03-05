@@ -1,0 +1,21 @@
+                    
+<fieldset>
+    <legend>Sort</legend>
+    <div class="modal-body" class="myGrid" >
+        <div id="grid1" ui-grid="gridOptions_sort_cols"   ui-grid-cellNav ui-grid-pinning  class="grid"   external-scopes="myViewModel" ></div>
+        <div id="grid2" ui-grid="gridOptions_sorted_cols"  ui-grid-cellNav  class="grid" ></div>
+        <div class="modal" ng-style="modalStyle">{{modalStyle}}
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"></div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn-primary btn-xl" ng-click="oksort()">OK</button>
+        <button class="btn-warning btn-xl" ng-click="cancel()">Cancel</button>
+    </div>
+</fieldset>

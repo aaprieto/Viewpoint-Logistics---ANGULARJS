@@ -1,0 +1,88 @@
+
+            
+<script type="text/ng-template" id="myModalContent.html">
+    <fieldset>
+        <legend>Main Menu</legend>
+        <div class="modal-body"  >
+            <button type="button" class="btn btn-primary" id="visit_return_button" ng-click="launchnorow('applymyview')" >
+                    Apply MyView
+                  </button>
+            <button type="button"  class="btn btn-primary" id="visit_return_button" ng-click="launchnorow('panels')" >
+                   Panels
+                  </button>
+            <button type="button"  class="btn btn-primary"  id="visit_return_button" ng-click="launchnorow('commands')" >
+                   Commands
+                  </button>
+            <button type="button"   class="btn btn-primary" id="visit_return_button" ng-click="launchnorow('takeaction')" >
+                   Take Action
+                  </button>
+            <button type="button"   class="btn btn-primary" id="visit_return_button" ng-click="launchnorow('administration')" >
+                   Administration
+                  </button>
+        </div>
+        <div class="modal-body">
+            <button type="button"   class="btn btn-primary" id="visit_return_button" ng-click="launchnorow('filter')" >
+                    Filter
+                  </button>
+            <button type="button"  class="btn btn-primary"  id="visit_return_button" ng-click="launchnorow('sort')" >
+                   Sort
+                  </button>
+            <button type="button"  class="btn btn-primary"  id="visit_return_button" ng-click="launchnorow('undo')" >
+                   Undo
+                  </button>
+            <button type="button"  class="btn btn-primary"  id="visit_return_button" ng-click="launchnorow('specials')" >
+                   Specials
+                  </button>
+            <button type="button"   class="btn btn-primary" id="visit_return_button" ng-click="launchnorow('spreadsheet')" >
+                   Spreadsheet
+                  </button>
+            <button type="button"  class="btn btn-primary"  id="visit_return_button" ng-click="launchnorow('xml')" >
+                   XML
+                  </button>
+            <button type="button"   class="btn btn-primary" id="visit_return_button" ng-click="launchnorow('query')" >
+                   Query
+                  </button>
+        </div>
+        <div class="modal-footer">
+            <!-- button class="btn btn-primary" ng-click="ok()">OK</button -->
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </fieldset>
+</script>
+<script type="text/ng-template" id="sortContent.html" >
+    <fieldset>
+        <legend>Sort</legend>
+        <div class="modal-body" class="myGrid" >
+            <div id="grid1" ui-grid="gridOptions_sort_cols"  ui-grid-cellNav ui-grid-pinning ui-grid-selection class="grid"   external-scopes="myViewModel" ></div>
+            <div id="grid2" ui-grid="gridOptions_sorted_cols"  class="grid" ></div>
+            <div class="modal" ng-style="modalStyle">{{modalStyle}}
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"></div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+                         /
+                          
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </fieldset>
+</script>
+<div class="myGrid">
+    <div >
+        <button type="button" class="btn btn-primary"  ng-click="open()">
+       Main Menu
+    </button>
+    </div>
+    <div ui-grid="gridOptions" class="gridStyle"></div>
+    <!--
+      <div class="gridStyle" ng-grid="gridOptions"></div>   
+        -->
+</div>
+<!--
+         <div ><button ng-click="open()">Menu1</button></div>
+             -->

@@ -1,0 +1,54 @@
+
+    <legend>Create New MyView</legend>
+    <style>
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: square;}
+ol.c {list-style-type: upper-roman;}
+ol.d {list-style-type: lower-alpha;}
+</style>
+</head>
+
+<p>Mandatory:</p>
+
+<ul class="a">
+  <li ng-click="baseonexistingmyview($event)">Base it on an existing MyView</li> 
+</ul>
+<!--
+<ul class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+-->
+<p>Optional:</p>
+   
+<ol class="a">     
+  <li ng-click="opendisplayactiongrid($event)">Display ActionGrid/MyView</li>  
+  <li>Adjust Query Parameters</li> 
+  <li ng-click="redefinepanelsandcolumns($event)">Redefine Panels and Columns</li>
+  <li>Redefine Sorting and Filtering</li> 
+    <ol class="d">
+        <li>Filtering</li>
+        <li>Sorting</li>
+    </ol> 
+  <li>Adjust Auto Refresh Setting</li>    
+  <li>Display Final MyView Setting</li>
+  <li>Crunch % Grand Totals</li>
+  <li>Crunch % Sub Totals</li>
+  <li>Flash Filter</li>
+  <li>Identify and Save New MyView</li>
+</ol>
+  <div class="modal-footer">
+        <button class="btn-warning  btn-xl" ng-click="cancel()">Cancel</button>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+

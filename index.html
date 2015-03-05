@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head lang="en">
+        <meta charset="utf-8">
+            <title>ViewPoint Logistics</title>
+            <!-- link rel="stylesheet" type="text/css" href="bower_components/ng-grid/ng-grid.css" / -->
+            <link rel="stylesheet" type="text/css" href="app/css/style.css" />
+            <!-- link rel="stylesheet" type="text/css" href="app/css/ngDialog.css" / -->
+            <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+                <script src="bower_components/jquery/dist/jquery.min.js"></script>
+                <!-- script src="bower_components/angular/angular.min.js"></script -->
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-touch.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+                <!-- script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script -->
+                <script src="bower_components/bootstrap-gh-pages/ui-bootstrap-0.9.0.min.js"></script>
+                <script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>
+                <script src="bower_components/angular-route.js"></script>
+                <!-- script type="text/javascript" src="bower_components/ng-grid/build/ng-grid.min.js"></script -->
+                <script type="text/javascript" src="app/x2js-v1.1.5/xml2json.min.js"></script>
+                <script type="text/javascript" src="app/assets/xml2json.js"></script>
+                <script type="text/javascript" src="app/main.js"></script>
+                <script type="text/javascript" src="app/assets/utils.js"></script>
+                <script src="app/js/ngDialog.js"></script>
+                
+                <script src="app/services/SessionIdFactory.js"></script>
+                <script src="app/services/XMLHeaderDocFactory.js"></script>
+                <script src="app/services/DatagridListFactory.js"></script>
+                <script src="app/services/ShareProperty.js"></script>
+                <script src="app/services/XMLHeaderDocService.js"></script>
+                <script src="app/services/MyViewFactory.js"></script>
+                <script src="app/services/RenditionFactory.js"></script>
+                <script src="app/services/UserRenditionFactory.js"></script> 
+                <script src="app/services/UpdateRenditionFactory.js"></script> 
+                <script src="app/services/GetGridHeaderDoc.js"></script> 
+                <script src="app/services/FilterDetailFactory.js"></script> 
+                
+           
+        
+                <script src="app/controllers/datagridController.js"></script>
+                <script src="app/controllers/FilterInstanceCtrl.js"></script>
+                <script src="app/controllers/ModifyFilteredColumns.js"></script>
+                <script src="app/controllers/ModifyFilterColumns_Edit.js"></script> 
+                <script src="app/controllers/SortInstanceCtrl.js"></script>
+                <script src="app/controllers/ModifySortedColumns.js"></script>
+                <script src="app/controllers/ModalInstanceCtrl.js"></script>
+                <script src="app/controllers/ModalInstanceCtrlWithClick.js"></script>
+                <script src="app/controllers/SpecialsInstanceCtrl.js"></script>
+                <script src="app/controllers/SpreadsheetsInstanceCtrl.js"></script>
+                <script src="app/controllers/XmlInstanceCtrl.js"></script>
+                <script src="app/controllers/AdministrationInstanceCtrl.js"></script>
+                <script src="app/controllers/PanelsInstanceCtrl.js"></script>
+                <script src="app/controllers/AlertMessageBox.js"></script>
+                <script src="app/controllers/CreateNewMyView.js"></script>
+                <script src="app/controllers/SelectMyViewsCtrl.js"></script>
+                <script src="app/controllers/RedefinePanelsAndColumnsCtrl.js"></script> 
+                <script src="app/controllers/InputPanelRedefinePanelsandColumns.js"></script>   
+                <!-- script src="app/controllers/XmlInstanceCtrl.js"></script -->
+                <!-- script src="app/views/specialsContent.html"></script -->
+                <!-- script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-touch.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+                <!-- script src="app/services/modalService.js"></script -->
+                <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js"></script>
+                <!-- link rel="styleSheet" href="bower_components/3.0.0-RC.18/ui-grid.css"/ -->
+                <!-- script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script -->
+                <script src="bower_components/3.0.0-RC.18/ui-grid.js"></script>
+                <script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+                <!--  get back to this -->
+                <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+                <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+                <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+        
+                <!-- link rel="stylesheet" href="bower_components/ui-grid-unstable.css" type="text/css" -->
+                <!-- link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css" -->
+            </head>
+            <body ng-controller="MyCtrl">
+                <!-- div class="myGrid" -->
+                <!-- div -->
+                <button type="button" class="btn-primary btn-xl"  ng-click="open('lg')">
+                   Main Menu 
+                </button>
+                <!-- Remove this for now, "ui-grid-cellNav" removes the mouse click functionality on the grid. maybe put it back in production. -->
+                <!-- div ui-grid="gridOptions"  ui-grid-selection  ui-grid-cellNav  class="gridStyle"></div -->
+                <div ui-grid="gridOptions"  ui-grid-selection  ui-grid-cellNav class="gridStyle" ui-grid-pinning  ui-grid-exporter></div>
+                                                    
+                 
+            </body>
+        </html> 
+        <script type="text/ng-template" id="specialsContent_test.html">
+            <fieldset>
+                <legend>Specials</legend>
+                <div class="modal-body"  >
+                    <button type="button" class="btn-primary btn-xl" id="visit_return_button" >
+                    Crunch % Grand Total
+                  </button>
+                    <button type="button"  class="btn-primary btn-xl" id="visit_return_button" >
+                   Crunch % Sub Total
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button"   class="btn-primary btn-xl" id="visit_return_button" >
+                    Columns to Rows
+                  </button>
+                    <button type="button"  class="btn-primary btn-xl"  id="visit_return_button">
+                   Flash Filter
+                  </button>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-warning  btn-xl" ng-click="cancel()">Cancel</button>
+                </div>
+            </fieldset>
+        </script>
